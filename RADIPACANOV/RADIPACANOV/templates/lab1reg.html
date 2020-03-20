@@ -1,0 +1,50 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/csscode2.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Pepe Registration</title>
+
+    <style>
+
+
+</style>
+
+</head>
+
+<body>
+
+<ul>
+    <li><a class="active" href="/home">Home</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/home">About</a></li>
+    <li><a href="/signup">Sign Up</a></li>
+</ul>
+<div class="background">
+    <form method="POST" class="div2">
+        <h1>Register for more MEMES!</h1>
+      <p>Fill this form. Really. Just do it.</p>
+        {% csrf_token %}
+            {{ form.as_p }}
+        <div class="form-group">
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me</label>
+            <button class="signupbtn" type="submit">Sign Up</button>
+        </div>
+    </form>
+    </div>
+</div>
+
+</body>
+
+<script>
+function myFunction()
+{
+  document.getElementById("id01").style.background = "purple";
+  location.href = "lab3.html";
+}
+</script>
+
+</html>

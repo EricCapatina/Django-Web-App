@@ -1,0 +1,40 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Pepe LogIn</title>
+    <style>
+</style>
+</head>
+<body>
+<ul>
+    <li><a class="active" href="/home">Home</a></li>
+    <li><a href="/registration">Registration</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/home">About</a></li>
+</ul>
+<div class="background">
+    <form method="POST" class="div2">
+        <h1>Welcome back, MemeLord.</h1>
+        {% csrf_token %}
+            {{ form.as_p }}
+        <div class="form-group">
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me</label>
+            <button class="signupbtn" type="submit">LogIn</button>
+        </div>
+    </form>
+    </div>
+</div>
+</body>
+<script>
+function myFunction()
+{
+  document.getElementById("id01").style.background = "purple";
+  location.href = "signup.html";
+}
+</script>
+</html>

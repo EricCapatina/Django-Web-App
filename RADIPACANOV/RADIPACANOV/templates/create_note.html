@@ -1,0 +1,19 @@
+<head>
+
+</head>
+<body>
+<h1>MemeLord Posts</h1>
+<a href="/home">Home</a>
+<a href="/create_note">Create another</a>
+    <div class="note">
+    {% for notes in note %}
+        <div class="notes">
+            <h2>{{ notes.title }}</h2>
+            <p>{{ notes.body|safe }}</p>
+            <p class="author">added by MemeLord {{ notes.author.username }}</p>
+            <p>Date'n'Time: {{ notes.date }}</p>
+        </div>
+    {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+{% load static %}
+<head>
+  <title>MEMES INFO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/csscode.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+{% if user.is_authenticated %}
+<ul>
+  <li><a class="active" href="/home">Home</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/home">About</a></li>
+  <li><a href="/create_note">Create Post</a></li>
+  <li><a href="/create">View Created Posts</a></li>
+  <li><a href="/logout">Log Out</a></li>
+  {% if request.user.is_superuser %}
+    <li><a href="/admin">Admin Panel</a></li>
+  {% else %}
+  {% endif %}
+</ul>
+{% else %}
+<ul>
+  <li><a class="active" href="/home">Home</a></li>
+  <li><a href="/registration">Registration</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/home">About</a></li>
+  <li><a href="/signup">Log In</a></li>
+  <li><a href="/logout">Log Out</a></li>
+</ul>
+{% endif %}
+<div class="jumbotron text-center">
+   <div class="container for-about">
+       <h1>Мемi</h1>
+        <p>Information about your favourite Memes!</p>
+       <img src="https://sun9-8.userapi.com/c853620/v853620790/1efb1c/hNyyJmAV8oc.jpg" alt="IDidThese" style="width:150px">
+       <img src="https://sun9-31.userapi.com/c204524/v204524248/562d2/Sk8o-bEhOvs.jpg" alt="TrollFace" style="width:150px">
+       <img src="https://sun9-46.userapi.com/c204524/v204524248/562f4/owsTyOkqZG8.jpg" alt="MeGusta" style="width:150px">
+       <img src="https://sun9-66.userapi.com/c204524/v204524248/56304/DdPvolmC5mA.jpg" alt="Okay" style="width:150px">
+       <img src="https://sun9-26.userapi.com/c204524/v204524248/56315/X_bfrmsn1P0.jpg" alt="LOL" style="width:150px">
+       <img src="https://sun9-42.userapi.com/c204524/v204524248/5632f/5f2EALcBeiE.jpg" alt="IKnowWhatUDid" style="width:150px">
+   </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Title 1</h2>
+      <p>Capitol</p>
+      <p>INFO</p>
+    </div>
+    <div class="col-md-4">
+      <h2>Title 2</h2>
+      <p>Capitol</p>
+      <p>INFO</p>
+    </div>
+    <div class="col-md-4">
+      <h2>Title 3</h2>
+      <p>Capitol</p>
+      <p>INFO</p>
+    </div>
+      <div class="col-md-4">
+      <h2>Title 4</h2>
+      <p>Capitol</p>
+      <p>INFO</p>
+    </div>
+      <div class="col-md-4">
+      <h2>Title 5</h2>
+      <p>Capitol</p>
+      <p>INFO</p>
+    </div>
+      <div class="col-md-4">
+      <h2>Title 6</h2>
+      <p>Capitol</p>
+      <p>INFO</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

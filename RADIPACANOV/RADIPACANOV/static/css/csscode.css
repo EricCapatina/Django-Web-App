@@ -1,0 +1,32 @@
+img {
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 2px;
+  width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: silver;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: gray;
+}
