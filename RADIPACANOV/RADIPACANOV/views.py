@@ -3,7 +3,6 @@ from django.contrib import messages
 from . import forms
 from .database import UserRegistrationForm
 from .models import Notes
-from django import forms
 from django.core.mail import send_mail
 
 def emailsend(request):
