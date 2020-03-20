@@ -5,7 +5,6 @@ from django.urls import include
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('home/', views.home, name='home'),
     path('signup/', auth_views.LoginView.as_view(template_name='singup.html'), name='login'),
     path('registration/', views.registration, name='registration'),
